@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.sp
 import com.hsdroid.unsplashxharish.utils.Helper.Companion.downloadBitmap
 import com.hsdroid.unsplashxharish.utils.ImageCache
 
@@ -40,7 +41,7 @@ fun ImageItem(
             contentScale = ContentScale.Crop
         )
     } ?: Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(text = "Loading...")
+        Text(text = "Loading..", fontSize = 14.sp)
     }
 
     DisposableEffect(imageUrl) {
